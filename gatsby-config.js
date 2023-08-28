@@ -29,15 +29,15 @@ module.exports = {
     siteUrl: "https://6437a107d4d2c95653c8d147--fancy-caramel-5e69a4.netlify.app/",
   },
   plugins: [  
+    {
+      resolve: `gatsby-source-strapi`,
+      options: strapiConfig,
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-source-strapi`,
-      options: strapiConfig,
-    }, 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
