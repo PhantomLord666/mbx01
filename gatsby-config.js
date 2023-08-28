@@ -35,16 +35,16 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
+      resolve: `gatsby-source-strapi`,
+      options: strapiConfig,
+    }, 
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
         path: `${__dirname}/src/assets/`,
       },
     },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: strapiConfig,
-    }, 
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
