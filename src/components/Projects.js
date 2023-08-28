@@ -32,14 +32,14 @@ const Projects = ({projects, title, showLink}) => {
      <div class="container full-lg-screen">     
       <h2 class="section-title-two">Featured Projects</h2>
       <a href="#trabajo-1" class="portfolio-card">
-        <StaticImage src="../assets/portfolio-1.jpg" alt="Trabajo 1" className="static-image"/>
+        <StaticImage src="../assets/e-commerce.webp" alt="Trabajo 1" className="static-image"/>
         <aside class="portfolio-card-info">
           <div>
-            <h3>Proyecto 1</h3>
+            <h3>E-commerce</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quibusdam modi dolore, ab unde labore totam
-              repudiandae omnis quam nesciunt eveniet, sequi ipsam ad culpa voluptatibus delectus ex voluptas provident?
-            </p>
+             A project made with django as backend and react.js as fronted, optimazed to 
+                  work perfectly by a API with graphql.
+                </p>
           </div>
         </aside>
       </a>
@@ -67,43 +67,7 @@ const Projects = ({projects, title, showLink}) => {
           </div>
         </aside>
       </a>
-      <a href="#trabajo-4" class="portfolio-card">
-        <StaticImage src="../assets/portfolio-4.jpg" alt="Trabajo 4" className="static-image"/>
-        <aside class="portfolio-card-info">
-          <div>
-            <h3>Proyecto 4</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium deserunt repellat quod cupiditate
-              fugiat
-              impedit vel mollitia eligendi, cumque ipsum nemo repellendus vero asperiores earum non similique numquam
-              recusandae totam?</p>
-          </div>
-        </aside>
-      </a>
-      <a href="#trabajo-5" class="portfolio-card">
-        <StaticImage src="../assets/portfolio-5.jpg" alt="Trabajo 5" className="static-image"/>
-        <aside class="portfolio-card-info">
-          <div>
-            <h3>Proyecto 5</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium deserunt repellat quod cupiditate
-              fugiat
-              impedit vel mollitia eligendi, cumque ipsum nemo repellendus vero asperiores earum non similique numquam
-              recusandae totam?</p>
-          </div>
-        </aside>
-      </a>
-      <a href="#trabajo-6" class="portfolio-card">
-        <StaticImage src="../assets/portfolio-6.jpg" alt="Trabajo 6" className="static-image"/>
-        <aside class="portfolio-card-info">
-          <div>
-            <h3>Proyecto 6</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium deserunt repellat quod cupiditate
-              fugiat
-              impedit vel mollitia eligendi, cumque ipsum nemo repellendus vero asperiores earum non similique numquam
-              recusandae totam?</p>
-          </div>
-        </aside>
-      </a>
-    </div> 
+          </div> 
       {
         showLink && <Link to="/projects" className="btn center-btn"> 
         projects

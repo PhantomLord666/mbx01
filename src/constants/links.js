@@ -1,11 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-const data = [
-  {
-    id: 1,
-    text: "home",
-    url: "/",
-  },
+const data = [ 
   {
     id: 2,
     text: "about",

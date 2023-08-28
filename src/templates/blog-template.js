@@ -13,7 +13,7 @@ import {
 
 
 const ComponentName = ({data}) => {
-  const {  title, desc } = data.blogs
+  const {  title, desc, date } = data.blogs
   const {content:{
     data: {content}
   },
@@ -24,8 +24,14 @@ const ComponentName = ({data}) => {
       <SEO title={title} description={desc} />
       <section className="blog-template">
         <div className="section-center">
-          <article className="blog-content">
-            <ReactMarkdown children={content} components={{
+          <article className="blog-content"> 
+            <h1>{title}</h1>
+            <h5>{date} by Manuel Batres</h5>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+           <ReactMarkdown children={content} components={{
             code({ node, inline, className, children, ...props }) {
               const match = /language-(\w+)/.exec(className || '')
               return !inline && match ? (
@@ -53,6 +59,9 @@ const ComponentName = ({data}) => {
  export const query = graphql`
    query GetSingleBlog($slug: String) {
      blogs: strapiBlog(slug: { eq: $slug }) {
+       title
+       desc
+       date(formatString: "MMMM DD, yyyy")
        content{
           data{
             content

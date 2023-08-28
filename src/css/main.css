@@ -213,10 +213,34 @@ p {
   text-align: center;
   color: var(--clr-cyan);
   font-family: myFirstFont;
+
+  position: relative;
+
+  padding: 2rem;
 }
 
 .section-title h2{
   font-family: myFirstFont;
+}
+
+#borderLeft {  
+        content: "";
+        position: absolute;
+        left: 35%;
+        top: 0;
+        height: 5px;
+        width: 30%;
+        border-top: thin solid var(--clr-white);
+}
+
+#borderBottom {  
+        content: "";
+        position: absolute;
+        left: 35%;
+        bottom: 0;
+        height: 5px;
+        width: 30%;
+        border-bottom: thin solid var(--clr-white);
 }
 
 
@@ -665,6 +689,7 @@ Services
 .service {
   background: var(--clr-white);
   background-color: #100D23;
+  background-color: #080611;
   padding: 3rem 1.5rem;
   margin-bottom: 2rem;
   border-radius: var(--radius);
@@ -691,6 +716,7 @@ Services
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
+/*
 .service:hover {
   background: var(--clr-primary-5);
   color: var(--clr-primary-9);
@@ -700,7 +726,7 @@ Services
 }
 .service:hover .underline {
   background: var(--clr-primary-9);
-}
+}*/
 @media screen and (min-width: 676px) {
   .services-center {
     display: grid;
@@ -1113,6 +1139,16 @@ About Page
   font-family: myFirstFont;
 }
 
+.about-text .section-title #borderLeft {
+  border-top: 0;
+
+}
+
+.about-text .section-title #borderBottom {
+  border-bottom: 0;
+}
+
+
 
 .about-text .section-title h2{
   font-family: myFirstFont;
@@ -1233,8 +1269,11 @@ Blog Template
   text-align: center;
   font-family: myFirstFont;
 }
+.blog-template h2{
+  text-align: center;
+  color: var(--clr-white);
+}
 
-.blog-template h2,
 .blog-template h3{
  color: var(--clr-white);
 font-family: mySecondFont;
@@ -1246,15 +1285,13 @@ font-family: mySecondFont;
   color:var(--clr-white);
 }
 .blog-template ul {
-  margin-top: 2rem;
+  margin-left: 15px;
+  list-style-type: disc;
   display: inline-block;
 }
+ 
 .blog-template ul li {
-  background: var(--clr-grey-9);
   color: var(--clr-grey-5);
-  padding: 0.5rem 1rem;
-  margin: 1rem 0;
-  text-transform: uppercase;
 }
 
 .blog-template p{
@@ -1384,7 +1421,7 @@ font-family: mySecondFont;
   
   .full-lg-screen {
     width: 100%;
-    min-height: 100vh;
+    min-height: 50vh;
   }
 
   .text-lg-center {
@@ -1519,3 +1556,92 @@ font-family: mySecondFont;
 
  
 }
+
+
+
+  .containerx {
+  	 max-width: 65vw;
+	 display: grid;
+	 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	 grid-gap: 35px;
+	 margin: 0 auto;
+	 padding: 40px 0;
+}
+
+ .containerx .cardx { 
+  position: relative;
+	 width: 300px;
+	 height: 400px;
+	 margin: 0 auto;
+	 background: #000;
+	 border-radius: 15px;
+	 box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
+.containerx .cardx .face {
+         position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ body .containerx .cardx .face.face1 {
+	 box-sizing: border-box;
+	 padding: 20px;
+  
+}
+ body .containerx .cardx .face.face1 h2 {
+	 margin: 0;
+	 padding: 0;
+}
+ body .containerx .cardx .face.face1 .java {
+	 background-color: #fffc00;
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+
+}
+ body .containerx .cardx .face.face1 .python {
+	 background-color: #00fffc;
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+}
+ body .containerx .cardx .face.face1 .cSharp {
+	 background-color: #fc00ff;
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+}
+ body .containerx .cardx .face.face2 {
+	 transition: 0.5s;
+}
+ body .containerx .cardx .face.face2 img {
+	 margin: 0;
+	 padding: 0;
+	 font-size: 10em;
+	 color: #fff;
+	 transition: 0.5s;
+	 text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	 z-index: 10;
+}
+ body .containerx .cardx:hover .face.face2 {
+	 height: 10px;
+}
+ body .containerx .cardx:hover .face.face2 img {
+   height: 150px;
+}
+ body .containerx .cardx:nth-child(1) .face.face2 {
+	 background-color: #100d23;
+	 border-radius: 15px;
+}
+ body .containerx .cardx:nth-child(2) .face.face2 {
+	 background-color: #100d23;
+	 border-radius: 15px;
+}
+ body .containerx .cardx:nth-child(3) .face.face2 {
+	 background-color: #100d23;
+	 border-radius: 15px;
+}
+
+
